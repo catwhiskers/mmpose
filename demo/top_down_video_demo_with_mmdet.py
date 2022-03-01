@@ -132,6 +132,10 @@ def main():
             dataset_info=dataset_info,
             return_heatmap=return_heatmap,
             outputs=output_layer_names)
+        
+        img = det_model.show_result(img, mmdet_results, score_thr=0.2)
+
+        
 
         # show the results
         vis_img = vis_pose_result(
